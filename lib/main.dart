@@ -10,11 +10,9 @@ class LoginPage extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return  Scaffold (
-
+    return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Center(
-
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
@@ -60,6 +58,7 @@ class LoginPage extends StatelessWidget {
                             labelText: "Enter Password",
                             hintText: "******",
                             border: OutlineInputBorder()),
+                        obscureText: true,
                       ),
                       SizedBox(
                         height: 20.0,
@@ -79,32 +78,32 @@ class LoginPage extends StatelessWidget {
                           textAlign: TextAlign.center,
                         ),
                       ),
-                       Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            Text(
-                              "Don't Have an Account",
-                              style: Theme.of(context).textTheme.subtitle2,
+                      Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Text(
+                            "Don't Have an Account",
+                            style: Theme.of(context).textTheme.subtitle2,
+                          ),
+                          SizedBox(
+                            width: 5,
+                          ),
+                          GestureDetector(
+                            onTap: () {},
+                            child: Text(
+                              "Sign Up",
+                              style: TextStyle(fontSize: 17),
                             ),
-                            SizedBox(
-                              width: 5,
-                            ),
-                            GestureDetector(
-                              onTap: () {},
-                              child: Text(
-                                "Sign Up",
-                                style: TextStyle(fontSize: 17),
-                              ),
-                            ),
-                          ],
-                        ),
+                          ),
+                        ],
+                      ),
                     ],
                   ),
                 ),
               ]),
         ),
       ),
-     );
+    );
   }
 }
